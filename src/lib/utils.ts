@@ -19,7 +19,7 @@ export function constructMetadata({
   title = "CaseCobra - custom high-quality phone cases",
   description = "Create custom high-quality phone cases in seconds",
   image = "/thumbnail.png",
-  icons = "/favicon.ico",
+  icons = "../app/favicon.ico",
 }: {
   title?: string;
   description?: string;
