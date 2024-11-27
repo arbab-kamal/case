@@ -17,9 +17,11 @@ export const getAuthStatus = async () => {
 
   if (!existingUser) {
     await db.user.create({
+      //@ts-ignore
       data: {
-        id: user.id,
+        id: user.id, // Ensure this maps to your schema's primary key
         email: user.email,
+        kindeId: user.id, // Ensure kindeId is unique in your schema
       },
     });
   }
