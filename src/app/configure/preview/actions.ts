@@ -30,7 +30,8 @@ export const createCheckoutSession = async ({
 
   if (!existingUser) {
     existingUser = await db.user.create({
-      data: { id: user.id, email: user.email || "" },
+      //@ts-ignore
+      data: { id: user.id, email: user.email, kindeId: user.id || "" },
     });
   }
 
